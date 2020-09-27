@@ -1,9 +1,9 @@
 extends KinematicBody2D
 #this is my code
-const MAX_SPEED = 50 
-const ACCELARATION = 500
-const FRICTION = 500
-const ROLL_SPEED = 70
+export var MAX_SPEED = 50 
+export var  ACCELARATION = 500
+export var  FRICTION = 500
+export var  ROLL_SPEED = 70
 
 enum {
 	MOVE,
@@ -23,6 +23,7 @@ onready var swordHitbox = $HitboxPivot/SwordHitbox
 func _ready():
 	animationTree.active = true
 	swordHitbox.knockback_vector = roll_vector
+	print("heloooo")
 	
 func _physics_process(delta):
 	#Set up match statement 
